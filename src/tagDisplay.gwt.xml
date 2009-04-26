@@ -1,0 +1,17 @@
+<module>
+
+	<!-- Inherit the core Web Toolkit stuff.                  -->
+	<inherits name='com.google.gwt.user.User'/>
+	<inherits name="com.google.gwt.http.HTTP"/>
+	<inherits name="com.google.gwt.xml.XML"/>
+	<inherits name="com.google.gwt.json.JSON"/>
+        <inherits name="com.google.gwt.maps.GoogleMaps" />
+        <inherits name='com.google.gwt.maps.jsio.JSIO'/>
+
+	<!-- Specify the app entry point class.                   -->
+	<entry-point class='client.tagDisplay'/>
+
+        <!-- Add gwt-log support                        -->
+        <inherits name="com.allen_sauer.gwt.log.gwt-log-OFF" />
+
+</module>

@@ -1,0 +1,418 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!---
+ $Id   $
+ Author: John Sibert
+ Copyright (c) 2008, 2009 John Sibert
+--->
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
+  <title>About Fish Tag Display</title>
+</head>
+<body>
+<h1 style="text-align: center;">Fish Tag Display</h1>
+<br>
+<ul id="mozToc">
+<!--mozToc h2 2 h3 3 h4 4 h5 5 h6 6-->
+  <li><a href="#mozTocId388576">Usage</a>
+    <ul>
+      <li>
+        <ul>
+          <li><a href="#mozTocId970876">Recapture Map Tab</a></li>
+          <li><a href="#mozTocId214808">Animation Tab</a></li>
+          <li><a href="#mozTocId725230">Browser Compatibility Issues</a></li>
+        </ul>
+      </li>
+      <li><a href="#mozTocId623833">Programming Notes</a>
+        <ul>
+          <li><a href="#mozTocId216323">Java Programming. </a></li>
+          <li><a href="#mozTocId650576">Using Different Data.</a></li>
+          <li><a href="#mozTocId166341">Data File Formats</a>
+            <ul>
+              <li><a href="#mozTocId826020">Tag Release and Recapture</a></li>
+              <li><a href="#mozTocId641343">Features</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#mozTocId58423">Credits</a></li>
+      <li><a href="#mozTocId493789">License</a></li>
+    </ul>
+  </li>
+</ul>
+<h2><a class="mozTocH2" name="mozTocId388576"></a>Usage</h2>
+<h3><a class="mozTocH3" name="mozTocId970876"></a>Recapture Map Tab</h3>
+<br>
+The Recapture display consists of two panels. The left panel is a
+Google map showing the recapture positions of all reported tags. The
+map has the usual Google Map controls for panning, zooming and
+selection of map type. Recapture positions are shown as small tear-drop
+shaped icons color-coded to the species of fish tagged. Recapture
+icons additionally marked with a black dot in the center indicate that
+the recaptured fish was tagged with some sort of electronic tag. The
+slightly larger aqua colored icons indicate geographic or other
+features
+that might be of interest to tunas or tuna fishermen.<br>
+<br>
+The right panel has a single control button and a Legend panel
+toward the bottom indicating the color coding of the recapture icons.
+The "Hide Features" button toggles to hide or show the features.<br>
+<p>As you move the cursor over the icons on the map, the cursor changes
+shape to indicate an active icon. Clicking an icon reveals information
+about the recaptured fish and draws a "track" from the point of release
+to the point of recapture.
+In the case of conventional tags, the track is simply a straight line
+(on a Mercator projection) connecting the point of release to the point
+of recapture. In the case of electronic tags, the track is estimated
+from the data recorded in the tag, usually by a method based on solar
+irradiance possibly with additional processing to reconstruct the most
+probable track. The recapture information includes species, geocoded
+release and recapture positions, great circle distance traveled in km,
+days at liberty. The sizes of the fish in cm at release and recapture
+and the nationality and gear type of the recapture vessel are also
+given if reported, </p>
+<br>
+<h3><a class="mozTocH3" name="mozTocId214808"></a>Animation Tab</h3>
+<br>
+The Animation display consists of two panels. The
+left panel consists of a Google Map with the usual controls for
+panning, zooming and
+selection of map type and aqua-colored icons indicating geographic or
+other features
+that might be of interest to tunas or tuna fishermen.<br>
+<br>
+The right panel contains control buttons and informative boxes about
+the animation and a legend. The "Hide Features" button simply toggles
+to hide or show the features. <br>
+<br>
+The two round buttons control the action. The Start button is the blue
+button with the inner white triangle pointing to the right. Pressing
+this button starts that tag releases, and the button changes to a red
+Stop button with an inner white square. Pressing the Reset button with
+the white triangle pointing to the left stops the action, clears all of
+the tags from the map and resets the date to the date of the first tag
+release.<br>
+<br>
+Each tagged fish is animated as a chain of colored balls, or "segments"
+of a "worm". The default worm length is 5 segments. As time passes, the
+worms move relentlessly from the point of release to the point of
+recapture. Conventional tags are assumed to move in a strait line at a
+constant speed from point of release to point of recapture. Tracks for
+electronic tags are statistical reconstructions based on from data
+recovered from the tags using state-space models developed.&nbsp; The
+track segments from electronic tags are indicated by a line connecting
+the segments.<br>
+<br>
+<h3><a class="mozTocH3" name="mozTocId725230"></a>Browser Compatibility</h3>
+<br>
+<big><span style="font-family: monospace;"></span></big>Fish Tag
+Display has been tested on the following operating systems and browsers
+(blank cells indicate not tested):<br>
+<br>
+<table style="text-align: left; width: 50%;" border="1" cellpadding="2"
+ cellspacing="2">
+  <tbody>
+    <tr>
+      <td
+ style="vertical-align: top; text-align: center; font-weight: bold;">Browser<br>
+      </td>
+      <td
+ style="vertical-align: top; text-align: center; font-weight: bold;">Windows
+XP<br>
+      </td>
+      <td
+ style="vertical-align: top; text-align: center; font-weight: bold;">Windows
+Vista<br>
+      </td>
+      <td
+ style="vertical-align: top; text-align: center; font-weight: bold;">Linux<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><span
+ style="font-weight: bold;">MaC OS</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Firefox 3<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">Yes<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">Yes<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">IE6<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">Yes<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">IE7<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">Yes<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Safari<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">Yes<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<h2><a class="mozTocH2" name="mozTocId623833"></a>Programming Notes</h2>
+<h3><a class="mozTocH3" name="mozTocId216323"></a>Java Programming. </h3>
+Fish Tag Display
+is written in Java using the <a
+ href="http://code.google.com/webtoolkit/">Google Web Toolkit
+</a>version GWT 1.5.3 for linux,&nbsp;<a
+ href="http://code.google.com/docreader/#p=gwt-google-apis&amp;s=gwt-google-apis&amp;t=MapsGettingStarted">Google
+Maps 1.0 Library</a>, and the <a
+ href="http://code.google.com/p/gwt-log/">GWT Logging Library</a>. <br>
+<br>
+<h3><a class="mozTocH3" name="mozTocId650576"></a>Using Different Data.</h3>
+The display can be easily modified by changing some
+input fields in the main html file, <code>tagDisplay.html</code>.
+<br>
+<br>
+The following bit of javascrpt code is executed when the display is
+loaded by
+the browser and sets the value of several variables.
+<br>
+<code><br>
+&lt;script type="text/javascript"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var code = '{\<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"centerLng" : -157.0,\<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"centerLat" :&nbsp;&nbsp; 21.5,\<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp; &nbsp;&nbsp;
+"initZoom" :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5,\<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp;
+"datURL" : "HTTP-subset.JSON",\<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"featuresURL" : "HTTP-features.JSON",\<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"aboutDatURL" : "aboutHTTP-data.html",\<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;
+"logoURL" :
+"http://imina.soest.hawaii.edu/PFRP/images/pfrp_tuna_bigger1.gif"\<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}';<br>
+&lt;/script&gt;<br>
+</code><br>
+These variables are interpreted by the display as follows:<br>
+<br>
+<table
+ style="width: 908px; height: 221px; text-align: left; margin-left: auto; margin-right: auto;"
+ border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td><code>centerLng:</code></td>
+      <td> Longitude of the map center in decimal degrees
+(east longitude positive, west negative)
+. <br>
+      </td>
+      <td style="vertical-align: top;">Required.</td>
+    </tr>
+    <tr>
+      <td><code>centerLat:</code></td>
+      <td> Latitude of the map center in decimal degrees
+(north latitude positive, south negative). <br>
+      </td>
+      <td style="vertical-align: top;">Required.</td>
+    </tr>
+    <tr>
+      <td><code>initZoom:</code></td>
+      <td> Initial zoom of the map. <br>
+      </td>
+      <td style="vertical-align: top;">Required.</td>
+    </tr>
+    <tr>
+      <td><code>datURL:</code></td>
+      <td> Name of the file containing the tag release and
+recapture information. See below for format of tagging data. <br>
+      </td>
+      <td style="vertical-align: top;">Required.</td>
+    </tr>
+    <tr>
+      <td><code>featuresURL:</code></td>
+      <td> Name of the file containing the names and
+positions of features. See below for format of features data. <br>
+      </td>
+      <td style="vertical-align: top;">Optional.</td>
+    </tr>
+    <tr>
+      <td><code>aboutDatURL:</code></td>
+      <td> Valid URL of a valid HTML file describing
+the data used in the display.</td>
+      <td style="vertical-align: top;"> Optional.</td>
+    </tr>
+    <tr>
+      <td><code>logoURL:</code></td>
+      <td> URL of an image to use a logo on the control
+panels.</td>
+      <td style="vertical-align: top;"> Optional.</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<h3><a class="mozTocH3" name="mozTocId166341"></a></h3>
+<h3><br>
+</h3>
+<h3>Data File Formats</h3>
+The tagging and features data are served in <a
+ href="http://www.json.org/">JavaScript Object Notation (JSON)</a>
+format. The most difficult task in adapting this display to your data
+is getting your data into valid JSON data structures.<br>
+<br>
+<h4><a class="mozTocH4" name="mozTocId826020"></a>Tag Release and
+Recapture</h4>
+<code><br>
+{<br>
+"TagList" : [<br>
+&nbsp; {"tag" : {<br>
+&nbsp;&nbsp;&nbsp;&nbsp; "ID" : "X16029",<br>
+&nbsp;&nbsp;&nbsp;&nbsp; "SP" : "Y",<br>
+&nbsp;&nbsp;&nbsp;&nbsp; "rel" : {"DD" : "1/8/1999", "LNG" : -157.18,
+"LAT" : 20.83, "LEN" : 34},<br>
+&nbsp;&nbsp;&nbsp;&nbsp; "cap" : {"DD" : "4/3/1999", "LNG" : -157.18,
+"LAT" : 20.83, "LEN" : 44.4, "FL" : "HW", "GG" : "HL"}<br>
+&nbsp; }},<br>
+&nbsp; {"tag" : {<br>
+&nbsp;&nbsp;&nbsp;&nbsp; "ID" : "X16026",<br>
+&nbsp;&nbsp;&nbsp;&nbsp; "SP" : "Y",<br>
+&nbsp;&nbsp;&nbsp;&nbsp; "rel" : {"DD" : "1/8/1999", "LNG" : -157.18,
+"LAT" : 20.83, "LEN" : 36},<br>
+&nbsp;&nbsp;&nbsp;&nbsp; "cap" : {"DD" : "4/5/1999", "LNG" : -157.18,
+"LAT" : 20.83, "LEN" : 43.1, "FL" : "HW", "GG" : "PL"}<br>
+&nbsp; }},<br>
+&nbsp; .
+<br>
+&nbsp; .
+<br>
+&nbsp; .
+<br>
+&nbsp; {"tag" : {<br>
+&nbsp;&nbsp;&nbsp;&nbsp; "ID" : "Big241",<br>
+&nbsp;&nbsp;&nbsp;&nbsp; "SP" : "B",<br>
+&nbsp;&nbsp;&nbsp;&nbsp; "TT" : "AT",<br>
+&nbsp;&nbsp;&nbsp;&nbsp; "rel" : {"DD" : "1/21/1999", "LNG" : -158.25,
+"LAT" : 18.65},<br>
+&nbsp;&nbsp;&nbsp;&nbsp; "cap" : {"DD" : "4/7/1999", "LNG" : -151.232,
+"LAT" : 13.3192, "FL" : "HW", "GG" : "HL"},<br>
+&nbsp;&nbsp;&nbsp;&nbsp; "PosList"&nbsp; : [<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {"pos" : {"DD" : "1/21/1999",
+"LNG" : -158.25, "LAT" : 18.65}},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {"pos" : {"DD" : "1/22/1999",
+"LNG" : -158.318, "LAT" : 18.5265}},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {"pos" : {"DD" : "1/23/1999",
+"LNG" : -157.418, "LAT" : 18.5595}},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . &nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {"pos" : {"DD" : "4/4/1999", "LNG"
+: -152.762, "LAT" : 13.0111}},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {"pos" : {"DD" : "4/5/1999", "LNG"
+: -152.105, "LAT" : 12.9631}},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {"pos" : {"DD" : "4/6/1999", "LNG"
+: -151.665, "LAT" : 13.1432}},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {"pos" : {"DD" : "4/7/1999", "LNG"
+: -151.232, "LAT" : 13.3192}} ]<br>
+&nbsp; }},<br>
+&nbsp; .<br>
+&nbsp; .<br>
+&nbsp; .<br>
+<br>
+&nbsp; {"tag" : {<br>
+&nbsp;&nbsp;&nbsp;&nbsp; "ID" : "X15567",<br>
+&nbsp;&nbsp;&nbsp;&nbsp; "SP" : "B",<br>
+&nbsp;&nbsp;&nbsp;&nbsp; "rel" : {"DD" : "12/26/1999", "LNG" : -155.43,
+"LAT" : 20.27, "LEN" : 67},<br>
+&nbsp;&nbsp;&nbsp;&nbsp; "cap" : {"DD" : "1/12/2002", "LNG" : -145.08,
+"LAT" : 21.9, "LEN" : 140, "FL" : "JP", "GG" : "LL"}<br>
+&nbsp; }},<br>
+]}<br>
+</code><br>
+<h4><a class="mozTocH4" name="mozTocId641343"></a>Features</h4>
+<code>
+{"FeatureList":[<br>
+{"LAT" : 18.65,"LNG" :-158.25,"NAME" : "Cross Seamount"},<br>
+{"LAT" : 23.43,"LNG" :-162.21,"NAME" : "NOAA Data Buoy 51001"},<br>
+{"LAT" : 17.19,"LNG" :-157.78,"NAME" : "NOAA Data Buoy 51002"},<br>
+{"LAT" : 19.22,"LNG" :-160.82,"NAME" : "NOAA Data Buoy 51003"},<br>
+{"LAT" : 17.52,"LNG" :-152.48,"NAME" : "NOAA Data Buoy 51004"},<br>
+{"LAT" : 28.20,"LNG" :-177.37,"NAME" : "Midway Islands"},<br>
+{"LAT" : 30.27,"LNG" :178.72,"NAME" : "Hancock Seamount"},<br>
+{"LAT" : 29.48,"LNG" :153.49,"NAME" : "Shatsky Rise"},<br>
+{"LAT" : 35.25,"LNG" :171.58,"NAME" : "Koko Guyot (Emperor Seamounts)"},<br>
+{"LAT" : 25.33,"LNG" :-172.06,"NAME" : "Northhampton Seamounts?"},<br>
+{"LAT" : 11.48,"LNG" :-168.52,"NAME" : "Northampton Seamounts?"}<br>
+]}<br>
+</code><br>
+<br>
+<h2><a class="mozTocH2" name="mozTocId58423"></a>Credits</h2>
+Java programming by John Sibert ("a real learning experience") with a
+lot of
+help from his colleague Johnoel Ancheta.<br>
+<br>
+The animation control button images were adapted from <a
+ href="http://www.everaldo.com">Crystal Project Icons</a> <br>
+<br>
+The tag recapture and feature icons were adapted from Sam Kuhn's public
+domain "web hues". As far as I can tell the original URL for these
+icons is no longer on line, but similar icons can be found at <a
+ href="http://sparce.cs.pdx.edu/mash-o-matic/tools.html">
+http://sparce.cs.pdx.edu/mash-o-matic/tools.html</a>.<br>
+<br>
+<h2><a class="mozTocH4" name="mozTocId493789"></a></h2>
+<h2>License</h2>
+Copyright (c) 2008, 2009&nbsp; John Sibert<br>
+<br>
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:<br>
+<br>
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.<br>
+<br>
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.<br>
+<br>
+</body>
+</html>
