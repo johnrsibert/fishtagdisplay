@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!---
+ $Id:   $
+ Author: John Sibert
+ Copyright (c) 2008, 2009 John Sibert
+--->
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <meta name="gwt:property" content="log_level=DEBUG">
+
+    <title>Fish Tags Display</title>
+
+    <link rel="shortcut icon" href= "images/three-icons.png" type="image/png">
+    <link rel="icon" href="images/three-icons.png" type="image/png"> 
+
+    <link rel="stylesheet" type="text/css" href="tagDisplay.css">
+    <style type="text/css">
+       v\:* {
+	  behavior:url(#default#VML);
+	}
+    </style>
+  </head>
+  <body>
+    <!-- substitute your google maps key here                     |                                                                                    |
+                                                                  |                                                                                    |  -->
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&key=ABQIAAAAA1oWeFlJGsuVp3OSZvpRTRSrSA53fmSbsb7acZyVNF3DvPmGghT_kp-2VmL1i1b7RmuFvpX3d1mGPQ"
+                type="text/javascript"></script>
+    <script language='javascript' src='tagDisplay.nocache.js'></script>
+    <script type="text/javascript">
+       var code = '{\
+                     "centerLng" : -157.0,\
+                     "centerLat" :   21.5,\
+                     "initZoom"  :      5,\
+                     "datURL"    : "HTTP-subset.JSON",\
+                   "featuresURL" : "HTTP-features.JSON",\
+                   "aboutDatURL" : "aboutHTTP-data.html",\
+                     "logoURL"   : "http://imina.soest.hawaii.edu/PFRP/images/pfrp_tuna_bigger1.gif"\
+      }';
+    </script>
+  </body>
+</html>
+
