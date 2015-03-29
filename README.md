@@ -56,14 +56,59 @@ The following bit of javascrpt code is executed when the display is loaded by th
 
 These variables are interpreted by the display as follows:
 
-| --------   | ---------------------------------------------------------------------------------------  | --------- |
-| centerLng: | Longitude of the map center in decimal degrees (east longitude positive, west negative). | Required. |
-| centerLat: | Latitude of the map center in decimal degrees (north latitude positive, south negative). | Required. | 
-| initZoom:  | Initial zoom of the map.| Required. |
-| datURL:    | Name of the file containing the tag release and recapture information. See below for format of tagging data. | Required. |
-| featuresURL: | Name of the file containing the names and positions of features. See below for format of features data. | Optional.|
-| aboutDatURL: | Valid URL of a valid HTML file describing the data used in the display. | ptional. |
-| logoURL: | URL of an image to use a logo on the control panels. | Optional. |
+<table
+ style="width: 908px; height: 221px; text-align: left; margin-left: auto; margin-right: auto;"
+ border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td><code>centerLng:</code></td>
+      <td> Longitude of the map center in decimal degrees
+(east longitude positive, west negative)
+. <br>
+      </td>
+      <td style="vertical-align: top;">Required.</td>
+    </tr>
+    <tr>
+      <td><code>centerLat:</code></td>
+      <td> Latitude of the map center in decimal degrees
+(north latitude positive, south negative). <br>
+      </td>
+      <td style="vertical-align: top;">Required.</td>
+    </tr>
+    <tr>
+      <td><code>initZoom:</code></td>
+      <td> Initial zoom of the map. <br>
+      </td>
+      <td style="vertical-align: top;">Required.</td>
+    </tr>
+    <tr>
+      <td><code>datURL:</code></td>
+      <td> Name of the file containing the tag release and
+recapture information. See below for format of tagging data. <br>
+      </td>
+      <td style="vertical-align: top;">Required.</td>
+    </tr>
+    <tr>
+      <td><code>featuresURL:</code></td>
+      <td> Name of the file containing the names and
+positions of features. See below for format of features data. <br>
+      </td>
+      <td style="vertical-align: top;">Optional.</td>
+    </tr>
+    <tr>
+      <td><code>aboutDatURL:</code></td>
+      <td> Valid URL of a valid HTML file describing
+the data used in the display.</td>
+      <td style="vertical-align: top;"> Optional.</td>
+    </tr>
+    <tr>
+      <td><code>logoURL:</code></td>
+      <td> URL of an image to use a logo on the control
+panels.</td>
+      <td style="vertical-align: top;"> Optional.</td>
+    </tr>
+  </tbody>
+</table>
 
 
 #### Data File Formats
