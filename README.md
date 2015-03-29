@@ -1,4 +1,4 @@
-#Fish Tag Display-
+#Fish Tag Display
 
 ##Summary
 
