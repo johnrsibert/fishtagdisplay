@@ -7,7 +7,9 @@ Key Features
 
 The animation is a representation of the relative movement rates of the tagged fish. Conventional tags are assumed to move at a constant speed in a straight line from point of release to point of recapture. Tracks for electronic tags are statistical reconstuctions based on from data recovered from the tags and are shown with lines connecting the segments. Click the play button to start the animation.
 
-Recapture positions and geographic features are represented as colored-coded icons. Clicking the icons reveals information about the fish, the tag release position and details about the recapture. Electronic tags are marked with icons containing a black circle in the center. Clicking a recapture icon also draws a track from the recapture point to the release point. 
+Recapture positions and geographic features are represented as colored-coded icons. Clicking the icons reveals information about the fish, the tag release position and details about the recapture. Electronic tags are marked with icons containing a black circle in the center. Clicking a recapture icon also draws a track from the recapture point to the release point.
+
+Automatically exported from code.google.com/p/fishtagdisplay
 
 ##Usage
 
