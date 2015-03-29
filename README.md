@@ -56,25 +56,21 @@ The following bit of javascrpt code is executed when the display is loaded by th
 
 These variables are interpreted by the display as follows:
 
-centerLng: 	Longitude of the map center in decimal degrees (east longitude positive, west negative) .
- Required.
-centerLat: 	Latitude of the map center in decimal degrees (north latitude positive, south negative).
-	Required.
-initZoom: 	Initial zoom of the map.
-	Required.
-datURL: 	Name of the file containing the tag release and recapture information. See below for format of tagging data.
-	Required.
-featuresURL: 	Name of the file containing the names and positions of features. See below for format of features data.
-	Optional.
-aboutDatURL: 	Valid URL of a valid HTML file describing the data used in the display. 	Optional.
-logoURL: 	URL of an image to use a logo on the control panels. 	Optional.
+| --------   | ---------------------------------------------------------------------------------------  | --------- |
+| centerLng: | Longitude of the map center in decimal degrees (east longitude positive, west negative). | Required. |
+| centerLat: | Latitude of the map center in decimal degrees (north latitude positive, south negative). | Required. | 
+| initZoom:  | Initial zoom of the map.| Required. |
+| datURL:    | Name of the file containing the tag release and recapture information. See below for format of tagging data. | Required. |
+| featuresURL: | Name of the file containing the names and positions of features. See below for format of features data. | Optional.|
+| aboutDatURL: | Valid URL of a valid HTML file describing the data used in the display. | ptional. |
+| logoURL: | URL of an image to use a logo on the control panels. | Optional. |
 
 
-Data File Formats
+#### Data File Formats
+
 The tagging and features data are served in JavaScript Object Notation (JSON) format. The most difficult task in adapting this display to your data is getting your data into valid JSON data structures.
 
-Tag Release and Recapture
-
+##### Tag Release and Recapture
 ```javascript
 {
 "TagList" : [
@@ -124,8 +120,7 @@ Tag Release and Recapture
 ]}
 ```
 
-Features
-
+#####Features
 ```javascript
 {"FeatureList":[
 {"LAT" : 18.65,"LNG" :-158.25,"NAME" : "Cross Seamount"},
