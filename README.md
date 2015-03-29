@@ -9,10 +9,6 @@ The animation is a representation of the relative movement rates of the tagged f
 
 Recapture positions and geographic features are represented as colored-coded icons. Clicking the icons reveals information about the fish, the tag release position and details about the recapture. Electronic tags are marked with icons containing a black circle in the center. Clicking a recapture icon also draws a track from the recapture point to the release point. 
 
----
-Automatically exported from code.google.com/p/fishtagdisplay
----
-
 ##Usage
 
 ###Recapture Tab
